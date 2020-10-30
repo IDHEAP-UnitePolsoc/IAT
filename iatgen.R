@@ -12,10 +12,11 @@ setwd("/Users/carloknotz/Dropbox (IDHEAP)/NCCR_WelfareSolidarity/NCCR Project/Su
 # install.packages("stringr")
 # devtools::install_github("iatgen/iatgen")
 library(iatgen)
+library(stringr)
 
 # IAT setup -- words only
 writeIATfull(IATname="iat_immigr_names",
-             posname="Pleasant", 
+             posname="Pleasant",
              negname="Unpleasant",
              Aname="Natives",
              Bname="Foreigners",
@@ -25,7 +26,7 @@ writeIATfull(IATname="iat_immigr_names",
              tgtType="words",
              Awords = c("Steven", "Jennifer", "Bradley", "Wendy", "Hunter", "Susan", "Jack"), # from Conaway/Bethune
              Bwords = c("Ahmad", "Shamika", "Enrique", "Tyrone", "Lupita", "Fatima", "Jose"),
-             
+
              #advanced options with recommended IAT settings
              n=c(20, 20, 20, 40, 40, 20, 40),   # number of trials per block
              qsf=TRUE,                          # outputs qualtrics file. If false, generates raw code
@@ -38,18 +39,34 @@ writeIATfull(IATname="iat_immigr_names",
 )
 
 # IAT setup -- words as categories, images as targets
-Ajpg <- c("~/childrace/BF_13.jpg",
-          "~/childrace/BM_09.jpg",
-          "~/childrace/BF_15.jpg",
-          "~/childrace/BM_12.jpg")
+Ajpg <- c("~/skintone/dark/TONE0031B.jpg",
+          "~/skintone/dark/TONE0041B.jpg",
+          "~/skintone/dark/TONE0051B.jpg",
+          "~/skintone/dark/TONE0061B.jpg",
+          "~/skintone/dark/TONE0071B.jpg",
+          "~/skintone/dark/TONE0081B.jpg",
+          "~/skintone/dark/TONE0091B.jpg",
+          "~/skintone/dark/TONE0101B.jpg",
+          "~/skintone/dark/TONE0111B.jpg",
+          "~/skintone/dark/TONE0112B.jpg",
+          "~/skintone/dark/TONE0113B.jpg",
+          "~/skintone/dark/TONE0114B.jpg")
 
-Bjpg <- c("~/childrace/WF_05.jpg",
-          "~/childrace/WM_03.jpg",
-          "~/childrace/WF_08.jpg",
-          "~/childrace/WM_01.jpg")
+Bjpg <- c("~/skintone/light/TONE0031A.jpg",
+          "~/skintone/light/TONE0041A.jpg",
+          "~/skintone/light/TONE0051A.jpg",
+          "~/skintone/light/TONE0061A.jpg",
+          "~/skintone/light/TONE0071A.jpg",
+          "~/skintone/light/TONE0081A.jpg",
+          "~/skintone/light/TONE0091A.jpg",
+          "~/skintone/light/TONE0101A.jpg",
+          "~/skintone/light/TONE0111A.jpg",
+          "~/skintone/light/TONE0112A.jpg",
+          "~/skintone/light/TONE0113A.jpg",
+          "~/skintone/light/TONE0114A.jpg")
 
 
-writeIATfull(IATname="iat_race_pics",
+writeIATfull(IATname="iat_skintone_basic",
              posname="Pleasant",
              negname="Unpleasant",
              Aname="Foreigners",
