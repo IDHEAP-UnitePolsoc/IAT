@@ -6,7 +6,7 @@
 
 # Carlo Knotz
 
-setwd("/Users/carloknotz/Dropbox (IDHEAP)/NCCR_WelfareSolidarity/NCCR Project/Survey I_international")
+setwd("/Users/carloknotz/Dropbox (IDHEAP)/NCCR_WelfareSolidarity/NCCR Project/Survey I_international/IAT")
 
 # install.packages("devtools")
 # install.packages("stringr")
